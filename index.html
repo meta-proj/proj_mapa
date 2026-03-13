@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power BI Repository — Documentação de Fontes</title>
+  <meta name="description" content="Repositório de documentação das fontes e arquivos dos dashboards Power BI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <div class="grid-glow"></div>
+  <div class="floating-icons-container" id="floatingIconsContainer"></div>
+  <nav class="nav-dots" id="navDots"></nav>
+  <div class="section-counter" id="sectionCounter">
+    <span id="currentNum">01</span>
+    <span class="counter-sep">/</span>
+    <span id="totalNum">07</span>
+  </div>
+
+  <main class="sections-wrapper" id="sectionsWrapper">
+
+    <section class="section active" data-index="0">
+      <div class="section-inner landing">
+        <div class="landing-badge">Projetos</div>
+        <h1>Mapa de Ferramentas</span></h1>
+        <p class="landing-sub">Navegue pelas fontes, tabelas e arquivos que compõem cada Power BI. Scroll para explorar.</p>
+        <div class="scroll-hint">
+          <div class="scroll-arrow"></div>
+          <span>Scroll para começar</span>
+        </div>
+      </div>
+    </section>
+
+<section class="section" data-index="1" id="data-map">
+  <div class="section-inner">
+    <div class="section-tag">Infraestrutura — Data Lineage</div>
+    <h2>Fluxo de Dados</h2>
+    <div class="map-container">
+      <svg class="map-connections" id="mapConnections"></svg>
+      <div class="map-grid">
+        <div class="map-column">
+          <div class="map-node source" id="src-unico">Banco Único</div>
+          <div class="map-node source" id="src-python">Scripts Python</div>
+          <div class="map-node source" id="src-gclick">Gclick</div>
+          <div class="map-node source" id="src-od">One Drive</div>
+          <div class="map-node source" id="src-rf">XML Receita</div>
+        </div>
+        
+        <div class="map-column">
+          <div class="map-node dashboard" id="dash-1" data-goto="3">Meta+</div>
+          <div class="map-node dashboard" id="dash-2" data-goto="4">DP</div>
+          <div class="map-node dashboard" id="dash-3" data-goto="5">Fiscal</div>
+          <div class="map-node dashboard" id="dash-4" data-goto="6">Contábil</div>
+          <div class="map-node dashboard" id="dash-5" data-goto="7">Produtos</div>
+          <div class="map-node dashboard" id="dash-6" data-goto="8">AuditoriaCS</div>
+          <div class="map-node dashboard" id="dash-7" data-goto="9">PCDAP</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" data-index="2" id="orchestration">
+  <div class="section-inner">
+    <div class="section-tag">Backend — Automação</div>
+    <h2>Orquestração <span class="text-accent">Prefect</span></h2>
+    
+    <div class="orchestration-grid">
+      <div class="orch-card">
+        <div class="orch-status">Ativo</div>
+        <h3>Honorários Boletos Omie</h3>
+        <p>Postagem de boletos do dia anterior.</p>
+        <div class="orch-meta">
+          <span><strong>Frequência:</strong> Diariamente</span>
+          <span><strong>Horário:</strong> 06:00h</span>
+        </div>
+      </div>
+
+      <div class="orch-card">
+        <div class="orch-status">Ativo</div>
+        <h3>Exportar PCDAP</h3>
+        <p>Extração de PDFs do BI (EXPORTAR) PCDAP.</p>
+        <div class="orch-meta">
+          <span><strong>Frequência:</strong> Mensal</span>
+          <span><strong>Dia:</strong> 15</span>
+        </div>
+      </div>
+
+      <div class="orch-card">
+        <div class="orch-status">Ativo</div>
+        <h3>Auditoria CS</h3>
+        <p>Atualização Metaweb.xlsx e Whatsapp.xlsx.</p>
+        <div class="orch-meta">
+          <span><strong>Frequência:</strong> Diariamente</span>
+          <span><strong>Horário:</strong> 16:00h</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- 1: Meta+ -->
+    <section class="section" data-index="3">
+      <div class="section-inner">
+        <div class="section-tag">01 — Dashboard</div>
+        <h2>Meta+</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Objetivo</h3>
+            <p>Acompanhamento de metas e indicadores de performance com visão consolidada por colaborador e equipe.</p>
+          </div>
+          <div class="info-card">
+            <h3>Fontes de Dados</h3>
+            <ul>
+              <li>Único</li>
+              <li>Gclick</li>
+              <li>Planilhas geradas por scripts Python</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Arquivos</h3>
+            <ul>
+              <li><code>Tarefas.xlsx</code></li>
+              <li><code>TimesINATIVOS.xlsx</code></li>
+              <li><code>UsuariosGclickINATIVOS.xlsx</code></li>
+              <li><code>Times.xlsx</code></li>
+              <li><code>ColaboradoresFolha.xlsx</code></li>
+              <li><code>EmailColaboradores.xlsx</code></li>
+              <li><code>RelatorioMicrosoft.xlsx</code></li>
+              <li><code>UsuariosGClick.xlsx</code></li>
+              <li><code>Hierarquia Cargos1.xlsx</code></li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Atualização</h3>
+            <p>Refresh realizado manualmente devido as suas dependências de arquivos .py</p>
+            <h3></h3>
+            <h3>Observações</h3>
+            <p>A extração dos dados em PDF é realizada mensalmente pelos arquivos <code>Meta+Geral.py</code> e <code>Meta+Individual.py</code></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2: Clientes - Departamento Pessoal -->
+    <section class="section" data-index="4">
+      <div class="section-inner">
+        <div class="section-tag">02 — Dashboard</div>
+        <h2>Clientes — Departamento Pessoal</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Objetivo</h3>
+            <p>Gestão de informações de clientes relacionadas a folha de pagamento, admissões, demissões e encargos.</p>
+          </div>
+          <div class="info-card">
+            <h3>Fontes de Dados</h3>
+            <ul>
+              <li>Único</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Arquivos</h3>
+            <ul>
+              <li>Todos os dados são consultados no banco de dados</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Atualização</h3>
+            <p>Semanalmente as 10:00h</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3: Clientes - Fiscal -->
+    <section class="section" data-index="5">
+      <div class="section-inner">
+        <div class="section-tag">03 — Dashboard</div>
+        <h2>Clientes — Fiscal</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Objetivo</h3>
+            <p>Gestão dos dados fiscais por cliente.</p>
+          </div>
+          <div class="info-card">
+            <h3>Fontes de Dados</h3>
+            <ul>
+              <li>Único</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Arquivos</h3>
+            <ul>
+              <li>Todos os dados são consultados no banco de dados</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Atualização</h3>
+            <p>Semanalmente as 11:00h</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4: Clientes - Contábil -->
+    <section class="section" data-index="6">
+      <div class="section-inner">
+        <div class="section-tag">04 — Dashboard</div>
+        <h2>Clientes — Contábil</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Objetivo</h3>
+            <p>Visão consolidada dos lançamentos contábeis, balancetes e demonstrativos financeiros por cliente.</p>
+          </div>
+          <div class="info-card">
+            <h3>Fontes de Dados</h3>
+            <ul>
+              <li>Único</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Arquivos</h3>
+            <ul>
+              <li>Todos os dados são consultados no banco de dados</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Atualização</h3>
+            <p>Semanalmente as 09:00h</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5: Clientes - Produtos -->
+    <section class="section" data-index="7">
+      <div class="section-inner">
+        <div class="section-tag">05 — Dashboard</div>
+        <h2>Clientes — Produtos</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Objetivo</h3>
+            <p>Análise de portfólio de produtos por cliente e comparação com concorrentes</p>
+          </div>
+          <div class="info-card">
+            <h3>Fontes de Dados</h3>
+            <ul>
+              <li>XML Receita Federal</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Arquivos</h3>
+            <ul>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Atualização</h3>
+            <p>Atualização manual</p>
+            <h3>Observação</h3>
+            <p>Este BI ainda está em fase de desenvolvimento</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6: AuditoriaCS -->
+    <section class="section" data-index="8">
+      <div class="section-inner">
+        <div class="section-tag">06 — Dashboard</div>
+        <h2>AuditoriaCS</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Objetivo</h3>
+            <p>Monitoramento de auditoria de Customer Success, rastreando a satisfação de clientes.</p>
+          </div>
+          <div class="info-card">
+            <h3>Fontes de Dados</h3>
+            <ul>
+              <li>One Drive</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Arquivos</h3>
+            <ul>
+              <li><code>Metaweb.xlsx</code></li>
+              <li><code>Whatsapp.xlsx</code></li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Atualização</h3>
+            <p>Semanalmente as 16:00</p>
+            <h3>Observação</h3>
+            <p>A atualização dos arquivos está automatizada no <code>Prefect</code></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7: PCDAP -->
+    <section class="section" data-index="9">
+      <div class="section-inner">
+        <div class="section-tag">07 — Dashboard</div>
+        <h2>PCDAP</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Objetivo</h3>
+            <p>Controle de cotas dos clientes</p>
+          </div>
+          <div class="info-card">
+            <h3>Fontes de Dados</h3>
+            <ul>
+              <li>Único</li>
+              <li>OneDrive</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Arquivos</h3>
+            <ul>
+              <li><code>PCDAP.pbix</code></li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Atualização</h3>
+            <p>No dia 15 de cada mês</p>
+            <h3>Observação</h3>
+            <p>A extração dos arquivos está automatizada via <code>Python no Prefect.</code></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
